@@ -1,8 +1,8 @@
-# Terminal Style Landing Page
+# Terminal Style Portfolio For Me
 
 Simple terminal-style website that uses the [WinBox](https://github.com/nextapps-de/winbox) library
 
-## [Demo](https://upbeat-allen-ed0aef.netlify.app/)
+## [Demo](https://nikogutierrez.ga)
 
 
 ## Preview
