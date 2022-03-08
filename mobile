@@ -1,0 +1,407 @@
+<html><head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  
+    <title>Bootstrap team page</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  
+
+    <script type="text/javascript" src="/js/lib/dummy.js"></script>
+
+  
+
+      <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+    <style id="compiled-css" type="text/css">
+
+        /*
+
+  *
+
+  * ==========================================
+
+  * FOR DEMO PURPOSE
+
+  * ==========================================
+
+  *
+
+  */
+
+  body {
+
+      background: black;
+
+  }
+
+  
+
+  .social-link {
+
+      width: 30px;
+
+      height: 30px;
+
+      border: 1px solid #ddd;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #666;
+
+      border-radius: 50%;
+
+      transition: all 0.3s;
+
+      font-size: 0.9rem;
+
+  }
+
+  
+
+  .social-link:hover, .social-link:focus {
+
+      background: #ddd;
+
+      text-decoration: none;
+
+      color: #555;
+
+  }
+
+      /* EOS */
+
+    </style>
+
+  
+
+    <script id="insert"></script>
+
+  
+
+  
+
+      <script src="/js/stringify.js?1b87a8e3a931715a2d86f1ebae1438038242ed40" charset="utf-8"></script>
+
+      <script>
+
+        const customConsole = (w) => {
+
+          const pushToConsole = (payload, type) => {
+
+            w.parent.postMessage({
+
+              console: {
+
+                payload: stringify(payload),
+
+                type:    type
+
+              }
+
+            }, "*")
+
+          }
+
+  
+
+          w.onerror = (message, url, line, column) => {
+
+            // the line needs to correspond with the editor panel
+
+            // unfortunately this number needs to be altered every time this view is changed
+
+            line = line - 70
+
+            if (line < 0){
+
+              pushToConsole(message, "error")
+
+            } else {
+
+              pushToConsole(`[${line}:${column}] ${message}`, "error")
+
+            }
+
+          }
+
+  
+
+          let console = (function(systemConsole){
+
+            return {
+
+              log: function(){
+
+                let args = Array.from(arguments)
+
+                pushToConsole(args, "log")
+
+                systemConsole.log.apply(this, args)
+
+              },
+
+              info: function(){
+
+                let args = Array.from(arguments)
+
+                pushToConsole(args, "info")
+
+                systemConsole.info.apply(this, args)
+
+              },
+
+              warn: function(){
+
+                let args = Array.from(arguments)
+
+                pushToConsole(args, "warn")
+
+                systemConsole.warn.apply(this, args)
+
+              },
+
+              error: function(){
+
+                let args = Array.from(arguments)
+
+                pushToConsole(args, "error")
+
+                systemConsole.error.apply(this, args)
+
+              },
+
+              system: function(arg){
+
+                pushToConsole(arg, "system")
+
+              },
+
+              clear: function(){
+
+                systemConsole.clear.apply(this, {})
+
+              },
+
+              time: function(){
+
+                let args = Array.from(arguments)
+
+                systemConsole.time.apply(this, args)
+
+              },
+
+              assert: function(assertion, label){
+
+                if (!assertion){
+
+                  pushToConsole(label, "log")
+
+                }
+
+  
+
+                let args = Array.from(arguments)
+
+                systemConsole.assert.apply(this, args)
+
+              }
+
+            }
+
+          }(window.console))
+
+  
+
+          window.console = { ...window.console, ...console }
+
+  
+
+          console.system("Running fiddle")
+
+        }
+
+  
+
+        if (window.parent){
+
+          customConsole(window)
+
+        }
+
+      </script>
+
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="14.1047.0" data-gr-ext-installed="">
+
+      <!-- For demo purpose -->
+
+  <div class="container py-5">
+
+      <div class="row text-center text-white">
+
+          <div class="col-lg-8 mx-auto">
+
+              <p></p>
+
+          </div>
+
+      </div>
+
+  </div><!-- End -->
+
+  
+
+  
+
+  <div class="container">
+
+      <div class="row text-center">
+
+  
+
+          <!-- Team item -->
+
+          <div class="col-xl-3 col-sm-6 mb-5">
+
+              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://yt3.ggpht.com/bopob2bbzHzVSZ1iWr2jexY0KZiTTd25HG4BqWGMjipuFg7XumV-1DZw6-3GJ8CpBBUt28Fp=s176-c-k-c0x00ffffff-no-rj" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+
+                  <h5 class="mb-0">Niko Gutierrez</h5><span class="small text-uppercase text-muted">12 YEAR OLD WEB DESSINER</span>
+
+                  <ul class="social mb-0 list-inline mt-3">
+
+                      <li class="list-inline-item"><a href="https://twitter.com/operator_niko" class="social-link"><i class="fa fa-twitter"></i></a></li>
+
+                      <li class="list-inline-item"><a href="https://www.instagram.com/operator.niko/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+
+                      <li class="list-inline-item"><a href="https://www.tiktok.com/@operator.niko/" class="social-link"><i class="fa-brands fa-tiktok"></i></a></li>
+
+                      <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCMGscqJCAGxRvn-CNLmXljA" class="social-link"><i class="fa-brands fa-youtube"></i></a></li>
+
+                      <li class="list-inline-item"><a href="https://discordapp.com/users/Operator_Niko#9527" class="social-link"><i class="fa-brands fa-discord"></i></a></li>
+
+                  </ul>
+
+              </div>
+
+          </div><!-- End -->
+
+           
+
+  
+
+          
+
+      </div>
+
+  </div>
+
+  
+
+      <script type="text/javascript">//<![CDATA[
+
+  
+
+  
+
+  
+
+  
+
+  
+
+    //]]></script>
+
+  
+
+    <script>
+
+      // tell the embed parent frame the height of the content
+
+      if (window.parent && window.parent.parent){
+
+        window.parent.parent.postMessage(["resultsFrame", {
+
+          height: document.body.getBoundingClientRect().height,
+
+          slug: "jzL4uktp"
+
+        }], "*")
+
+      }
+
+  
+
+      // always overwrite window.name, in case users try to set it manually
+
+      window.name = "result"
+
+    </script>
+
+  
+
+      <script>
+
+        let allLines = []
+
+  
+
+        window.addEventListener("message", (message) => {
+
+          if (message.data.console){
+
+            let insert = document.querySelector("#insert")
+
+            allLines.push(message.data.console.payload)
+
+            insert.innerHTML = allLines.join(";\r")
+
+  
+
+            let result = eval.call(null, message.data.console.payload)
+
+            if (result !== undefined){
+
+              console.log(result)
+
+            }
+
+          }
+
+        })
+
+      </script>
+
+  
+
+  
+
+  
+
+  <script src="https://kit.fontawesome.com/d394aaa8bf.js" crossorigin="anonymous"></script>
